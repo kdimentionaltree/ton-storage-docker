@@ -39,3 +39,13 @@ Most part of settings are located in `.env`.
 * `TON_PROXY_ADNL_PORT=3334`: port to adnl queries (must differs with adnl-port of Storage).
 * `TON_PROXY_VERBOSITY_LEVEL=1`: verbosity level.
 * `TON_PROXY_GLOBAL_CONFIG=private/mainnet.json`: global config path.
+
+
+## FAQ
+1. How to check if TON proxy is working:
+    * Get your public IP.
+    * In terminal: `curl -v -x <yout-ip>:8080 http://<adnl-userfrienly-form>.adnl/`.
+        * If you get HTML code, then it works with your proxy.
+    * In terminal: `curl -v -x in1.ton.org:8080 http://<adnl-userfrienly-form>.adnl/`.
+        * If not works, then try `in2.ton.org:8080` and `in3.ton.org:8080`.
+        * If you get HTML code, then it works with public proxies.
