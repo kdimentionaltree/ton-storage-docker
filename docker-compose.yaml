@@ -1,25 +1,25 @@
 version: '3.9'
 
-x-common-env: &common
-  TON_STORAGE_ADNL_PORT:
-  TON_STORAGE_CONTROL_PORT:
-  TON_STORAGE_VERBOSITY_LEVEL:
-  TON_STORAGE_PUBLIC_IP:
-  TON_STORAGE_GLOBAL_CONFIG: /run/secrets/global-config
-  TON_STORAGE_DATABASE_NAME:
-  TON_STORAGE_GATEWAY_PORT:
-  TON_STORAGE_GATEWAY_DOMAIN:
-  TON_STORAGE_GATEWAY_CONFIG: /run/secrets/gateway-config
-
 services:
-  tonstorage:
-    image: localhost:5000/tonstorage:latest
+  gateway:
+    image: localhost:5000/tonstorage-gateway:latest
     build:
-      context: tonstorage
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        TON_REPO: https://github.com/ton-blockchain/ton
+        TON_BRANCH: testnet
     network_mode: host
-    environment: *common
-    tty: true
+    environment:
+      TON_STORAGE_ADNL_PORT:
+      TON_STORAGE_CONTROL_PORT:
+      TON_STORAGE_VERBOSITY_LEVEL:
+      TON_PUBLIC_IP:
+      TON_STORAGE_GLOBAL_CONFIG: /run/secrets/global-config
+      TON_STORAGE_DATABASE_NAME:
+      TON_STORAGE_GATEWAY_PORT:
+      TON_STORAGE_GATEWAY_DOMAIN:
+      TON_STORAGE_GATEWAY_CONFIG: /run/secrets/gateway-config
     secrets:
       - global-config
       - gateway-config
