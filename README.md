@@ -1,8 +1,10 @@
 # TON Storage Docker
 
-This container contains two tasks:
+The main container contains two tasks:
 - Storage daemon.
 - Storage gateway.
+
+Additionaly, you cat run TON proxy container for your gateway.
 
 ## Running docker
 * First time configuration: `./init.sh mainnet` or `./init.sh testnet`.
@@ -10,6 +12,7 @@ This container contains two tasks:
     * If you already have ADNL address, then put user-friendly form to `private/adnl`, hex-form to `private/adnl-hex` and private key to `private/adnl-private`.
     * (WARNING) Make a backup of 3 files with ADNL: `private/adnl`, `private/adnl-hex` and `private/adnl-private`.
 * (WIP) Put your `config.js` to `private/config.js` file.
+* (WIP, kostil) Change line 24 of `tonstorage-gateway/package.json` to `"tonstorage-cli": "./tonstorage-cli"`, delete `package-lock.json`.
 * Check `.env` file and change settings.
 * Build: `docker-compose build`.
 * Run: `docker-compose up -d`.
