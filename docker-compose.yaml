@@ -22,7 +22,7 @@ services:
     secrets:
       - global-config
     volumes:
-      - `pwd`/exchange:/exchange
+      - ./exchange:/exchange
     restart: always
 volumes:
   ton-storage-data:
