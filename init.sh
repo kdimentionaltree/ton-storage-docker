@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 mkdir -p private
+mkdir -p exchange
 
 if [ "$#" -ne 1 ]; then
     echo "Exact 1 argument required: config path or mainnet/testnet"
@@ -32,7 +33,6 @@ TON_STORAGE_DATABASE_NAME=${TON_STORAGE_DATABASE_NAME:-ton-storage}
 
 TON_STORAGE_GATEWAY_PORT=${TON_STORAGE_GATEWAY_PORT:-3000}
 TON_STORAGE_GATEWAY_DOMAIN=${TON_STORAGE_GATEWAY_DOMAIN:-domain.ton}
-TON_STORAGE_GATEWAY_CONFIG=${TON_STORAGE_GATEWAY_CONFIG:-private/config.js}
 
 TON_PUBLIC_IP=$PUBLIC_IP
 
@@ -56,4 +56,4 @@ if [ "$TON_PROXY_ENABLED" = 1 ]; then
     echo "ADNL_HEX: $(cat private/adnl-hex), ADNL: $(cat private/adnl)"
 fi
 
-echo "!!! Put your gateway config.js to '${TON_STORAGE_GATEWAY_CONFIG:-private/config.js}' file !!!"
+# echo "!!! Put your gateway config.js to '${TON_STORAGE_GATEWAY_CONFIG:-private/config.js}' file !!!"
