@@ -20,7 +20,7 @@ Additionaly, you cat run TON proxy container for your gateway.
 ## Uploading content
 
 * Place necessary files to `exchange` folder.
-* Connect to docker container: `docker exec -it ton-storage-docker-gateway bash`.
+* Connect to docker container: `docker exec -it ton-storage-docker-gateway-1 bash`.
 * Run storage-daemon-cli: `storage-daemon-cli -I 127.0.0.1:5555 -k /data/ton-storage/cli-keys/client -p /data/ton-storage/cli-keys/server.pub`.
 * Then follow [instructions](https://ton.org/docs/participate/ton-storage/storage-daemon#creating-a-bag-of-files).
 
