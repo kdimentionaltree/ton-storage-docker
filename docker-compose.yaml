@@ -23,6 +23,7 @@ services:
       - global-config
     volumes:
       - ./exchange:/exchange
+      - ton-storage-data:/data
     restart: always
 volumes:
   ton-storage-data:
