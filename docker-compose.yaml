@@ -23,7 +23,7 @@ services:
     secrets:
       - global-config
       - gateway-config
-
+    restart: always
 volumes:
   ton-storage-data:
 
