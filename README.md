@@ -17,6 +17,13 @@ Additionaly, you cat run TON proxy container for your gateway.
 * Build: `docker-compose build`.
 * Run: `docker-compose up -d`.
 
+## Uploading content
+
+* Place necessary files to `exchange` folder.
+* Connect to docker container: `docker exec -it ton-storage-docker-gateway bash`.
+* Run storage-daemon-cli: `storage-daemon-cli -I 127.0.0.1:5555 -k /data/ton-storage/cli-keys/client -p /data/ton-storage/cli-keys/server.pub`.
+* Then follow [instructions](https://ton.org/docs/participate/ton-storage/storage-daemon#creating-a-bag-of-files).
+
 ## Storage settings
 Most part of settings are located in `.env`.
 
