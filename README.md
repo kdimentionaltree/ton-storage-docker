@@ -4,7 +4,7 @@ The main container contains two tasks:
 - Storage daemon.
 - Storage gateway.
 
-Additionaly, you cat run TON proxy container for your gateway.
+Additionaly, you can run TON proxy container for your gateway.
 
 ## Running docker
 * First time configuration: `./init.sh mainnet` or `./init.sh testnet`.
