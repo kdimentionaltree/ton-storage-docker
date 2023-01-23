@@ -1,6 +1,0 @@
-[submodule "tonstorage-gateway"]
-	path = tonstorage-gateway
-	url = https://github.com/ndatg/tonstorage-gateway
-[submodule "tonstorage-cli"]
-	path = tonstorage-cli
-	url = https://github.com/ndatg/tonstorage-cli
