@@ -8,7 +8,7 @@ ARG TON_REPO
 RUN git clone --recursive ${TON_REPO:-https://github.com/ton-blockchain/ton} /ton
 WORKDIR /ton
 ARG TON_BRANCH
-RUN git checkout ${TON_BRANCH:-testnet}
+RUN git checkout ${TON_BRANCH:-master}
 
 ENV CC clang-6.0
 ENV CXX clang++-6.0
@@ -31,8 +31,7 @@ COPY --from=builder /ton/build/storage/storage-daemon/storage-daemon-cli /usr/lo
 COPY --from=builder /ton/build/storage/storage-daemon/storage-daemon /usr/local/bin/
 
 WORKDIR /app
-COPY tonstorage-gateway  /app/
-COPY tonstorage-cli /app/tonstorage-cli
+COPY storage-gateway  /app/
 RUN npm install
 
 COPY docker/scripts /scripts

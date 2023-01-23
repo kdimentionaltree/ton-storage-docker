@@ -11,8 +11,6 @@ Additionaly, you cat run TON proxy container for your gateway.
     * If you want setup TON proxy: `TON_PROXY_ENABLED=1 ./init.sh <network>`.
     * If you already have ADNL address, then put user-friendly form to `private/adnl`, hex-form to `private/adnl-hex` and private key to `private/adnl-private`.
     * (WARNING) Make a backup of 3 files with ADNL: `private/adnl`, `private/adnl-hex` and `private/adnl-private`.
-* (WIP) Put your `config.js` to `private/config.js` file.
-* (WIP, kostil) Change line 24 of `tonstorage-gateway/package.json` to `"tonstorage-cli": "./tonstorage-cli"`, delete `package-lock.json`.
 * Check `.env` file and change settings.
 * Build: `docker-compose build`.
 * Run: `docker-compose up -d`.

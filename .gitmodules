@@ -1,0 +1,3 @@
+[submodule "storage-gateway"]
+	path = storage-gateway
+	url = https://github.com/ton-blockchain/storage-gateway
