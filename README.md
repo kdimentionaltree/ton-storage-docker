@@ -31,10 +31,10 @@ Most part of settings are located in `.env`.
 * `TON_STORAGE_VERBOSITY_LEVEL=1`: verbosity level (3 is recommended for debug, 4 is full debug).
 * `TON_STORAGE_PUBLIC_IP=116.202.116.162`: your public IP (should be detected automatically).
 * `TON_STORAGE_GLOBAL_CONFIG`: global config (set by `init.sh` stript).
-* `TON_STORAGE_DATABASE_NAME=/var/ton-storage`: database name (recommended to use default value).
+* `TON_STORAGE_DATABASE_NAME=ton-storage`: database name (recommended to use default value).
 
 ### (WIP) Storage gateway settings
-* `TON_STORAGE_GATEWAY_CONFIG=private/config.js`: path to config.js (set by `init.sh`).
+<!-- * `TON_STORAGE_GATEWAY_CONFIG=private/config.js`: path to config.js (set by `init.sh`). -->
 * `TON_STORAGE_GATEWAY_PORT=3000`: requi.
 * `TON_STORAGE_GATEWAY_DOMAIN=domain.ton`: WIP.
 
